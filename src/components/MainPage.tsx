@@ -4,19 +4,19 @@ import Table from "./Table";
 
 export default function MainPage() {
 
-    const [movies, setMovies] = useState([])
+    const [books, setBooks] = useState([])
 
     useEffect(() => {
         axios.get('https://www.googleapis.com/books/v1/volumes?q=search+terms')
             .then((response) => {
-                setMovies(response.data.items)
+                setBooks(response.data.items)
             })
     }, []);
 
 
     return (
         <div>
-            {movies.length > 0 && <Table data={movies}/>}
+            {books.length > 0 && <Table data={books}/>}
         </div>
     )
 }
