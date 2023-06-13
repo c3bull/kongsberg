@@ -1,7 +1,6 @@
 import {useEffect, useState} from 'react';
 import {useParams} from "react-router";
 import axios from "axios";
-import Table from "./Table";
 
 export default function BookDetails() {
     const {bookId} = useParams();
@@ -16,7 +15,7 @@ export default function BookDetails() {
     }, []);
 
     return (
-        <main className='w-full text-start'>
+        <main className='w-full text-start pt-32'>
             {bookDetails.length > 0 &&
                 <div className='flex flex-col items-center gap-y-10'>
                     <div className='flex w-2/3 border border-primary'>

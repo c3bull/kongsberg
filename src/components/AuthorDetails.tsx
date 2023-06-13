@@ -16,6 +16,6 @@ export default function AuthorDetails() {
     }, []);
 
     return (
-        <>{authorDetails.length > 0 && <Table data={authorDetails}/>}</>
+        <div className='pt-32'>{authorDetails.length > 0 && <Table data={authorDetails}/>}</div>
     );
 };
