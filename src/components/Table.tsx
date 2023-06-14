@@ -12,14 +12,14 @@ export default function Table({data}) {
     ]
 
     return (
-        <table className='border border-primary shadow-xl'>
-            <tr className='border border-primary'>
+        <table className='shadow-xl rounded-t-lg rounded-b-lg overflow-hidden'>
+            <tr className=''>
                 {tableHeader.map((header, index) => (
                     <th
                         key={index}
-                        className='border border-primary px-2 uppercase bg-cyan-300'
+                        className='text-white h-10 px-2 uppercase text-start bg-cyan-700'
                     >
-                        {header.name}
+                        <p className='p-2'>{header.name}</p>
                     </th>
                 ))}
             </tr>
@@ -28,7 +28,7 @@ export default function Table({data}) {
                     index={index}
                     key={item.id}
                     id={item.id}
-                    kind={item.kind}
+                    kind={item.volumeInfo.categories}
                     authors={item.volumeInfo.authors}
                     title={item.volumeInfo.title}
                     publishedDate={item.volumeInfo.publishedDate}
