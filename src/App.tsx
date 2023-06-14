@@ -5,6 +5,7 @@ import AuthorDetails from "./components/AuthorDetails";
 import Navbar from "./components/Navbar";
 import Books from "./components/Books";
 import Authors from "./components/Authors";
+import Footer from "./components/Footer";
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
                     <Route path='/authors' element={<Authors/>}/>
                     <Route path='/authors/:author' element={<AuthorDetails/>}/>
                 </Routes>
+                <Footer/>
             </Router>
         </>
     )

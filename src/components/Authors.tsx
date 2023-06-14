@@ -33,12 +33,12 @@ export default function Authors() {
     }, [fetchedData]);
 
     return (
-        <main className='pt-32 w-full flex justify-center min-h-screen'>
+        <main className='pt-32 w-full flex justify-center min-h-[70vh]'>
             {allAuthors.length > 1 ?
                 <article className='grid grid-cols-4'>
                     {allAuthors.map((item, index) => (
                         <div onClick={() => authorDetailsButton(item.replaceAll('.', '').split(' ').join('+'))}
-                             className='hover:scale-105 duration-200 h-48 w-48 bg-gradient-to-t from-cyan-200 via-cyan-100 to-cyan-200 shadow-md rounded-md m-2 flex items-center justify-center text-center p-5 cursor-pointer'>
+                             className='hover:scale-105 duration-200 aspect-square bg-gradient-to-t from-cyan-200 via-cyan-100 to-cyan-200 shadow-md rounded-md m-2 flex items-center justify-center text-center p-5 cursor-pointer'>
                             <p className='text-xl'>{item}</p>
                         </div>
                     ))}

@@ -16,7 +16,7 @@ export default function AuthorDetails() {
     }, []);
 
     return (
-        <main className='pt-32 w-screen flex justify-center'>{authorDetails.length > 0 ?
+        <main className='min-h-[70vh] pt-32 w-full flex justify-center'>{authorDetails.length > 0 ?
             <Table data={authorDetails}/> :
             <img src='https://openclipart.org/image/800px/311354'
                  className='w-20 h-20 animate-spin'

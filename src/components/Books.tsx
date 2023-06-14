@@ -28,10 +28,10 @@ export default function Books() {
     }
 
     return (
-        <main className='pt-32 w-screen flex justify-center'>
+        <main className='pt-32 min-h-[70vh] w-full flex justify-center'>
             {books.length > 0 ?
-                <div>
-                    <div className='flex gap-2 items-center'>
+                <div className='w-full flex flex-col justify-center'>
+                    <div className='flex gap-2 items-center justify-center'>
                         <input className="shadow-md bg-gray-100 h-10 p-4 rounded-full focus:outline-0"
                                placeholder="Szukaj..."
                                onChange={(e) => setSearchInput(e.target.value)}
@@ -43,7 +43,7 @@ export default function Books() {
                             className='w-7 h-7 cursor-pointer'
                             alt='search'/>
                     </div>
-                    <div className='mt-10'>
+                    <div className='flex justify-center mt-10 p-2'>
                         <Table data={books}/>
                     </div>
                 </div> :

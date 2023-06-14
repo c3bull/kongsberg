@@ -22,7 +22,7 @@ export default function BookDetails() {
     };
 
     return (
-        <main className='w-full text-start flex justify-center items-center pt-32 '>
+        <main className='min-h-[70vh] w-full text-start flex justify-center pt-32 '>
             {bookDetails.length > 0 ?
                 <div className='flex flex-col items-center gap-y-10 w-[1200px]'>
                     <article className='flex w-2/3 rounded-md bg-gray-100 shadow-lg'>
