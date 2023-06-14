@@ -19,8 +19,8 @@ export default function Breadcrumbs() {
         })
 
     return (
-        <div className='h-full flex w-full justify-center items-center text-white'>
+        <main className='h-full flex w-full justify-center items-center text-white font-semibold uppercase'>
             <Link to="/">Home</Link>{crumbs}
-        </div>
+        </main>
     )
 }

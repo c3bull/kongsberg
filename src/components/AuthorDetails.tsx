@@ -6,7 +6,7 @@ import Table from "./Table";
 export default function AuthorDetails() {
     const {author} = useParams();
     const [authorDetails, setAuthorDetails] = useState([])
-    console.log('id ',author)
+    console.log('id ', author)
     useEffect(() => {
         axios.get(`https://www.googleapis.com/books/v1/volumes?q=inauthor:"${author}"`)
             .then((response) => {
@@ -16,6 +16,11 @@ export default function AuthorDetails() {
     }, []);
 
     return (
-        <div className='pt-32'>{authorDetails.length > 0 && <Table data={authorDetails}/>}</div>
+        <main className='pt-32 w-screen flex justify-center'>{authorDetails.length > 0 ?
+            <Table data={authorDetails}/> :
+            <img src='https://openclipart.org/image/800px/311354'
+                 className='w-20 h-20 animate-spin'
+                 alt='spinner'/>}
+        </main>
     );
 };

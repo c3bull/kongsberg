@@ -12,12 +12,12 @@ export default function Table({data}) {
     ]
 
     return (
-        <table className='border border-primary'>
+        <table className='border border-primary shadow-xl'>
             <tr className='border border-primary'>
                 {tableHeader.map((header, index) => (
                     <th
                         key={index}
-                        className='border border-primary px-2 uppercase bg-gray-400'
+                        className='border border-primary px-2 uppercase bg-cyan-300'
                     >
                         {header.name}
                     </th>
