@@ -1,7 +1,6 @@
 import TableRow from "./TableRow";
 
 export default function Table({data}) {
-    console.log(data)
 
     const tableHeader = [
         {name: "id"},
@@ -12,12 +11,13 @@ export default function Table({data}) {
     ]
 
     return (
-        <table className='shadow-xl rounded-t-lg rounded-b-lg overflow-hidden'>
+        <table className=' shadow-xl rounded-t-lg rounded-b-lg overflow-hidden mx-2 w-full'>
+            <tbody>
             <tr className=''>
                 {tableHeader.map((header, index) => (
                     <th
                         key={index}
-                        className='text-white h-10 px-2 uppercase text-start bg-cyan-700'
+                        className='text-white h-10 px-2 uppercase text-start bg-cyan-700 overflow-hidden'
                     >
                         <p className='p-2'>{header.name}</p>
                     </th>
@@ -34,6 +34,7 @@ export default function Table({data}) {
                     publishedDate={item.volumeInfo.publishedDate}
                 />
             ))}
+            </tbody>
         </table>
     )
 }

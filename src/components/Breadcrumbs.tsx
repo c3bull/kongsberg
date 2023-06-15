@@ -13,13 +13,13 @@ export default function Breadcrumbs() {
 
             return (
                 <div key={crumb} className='flex'>
-                    <p className='mx-2'>•</p> <Link to={currentLink}>{crumb.split('+').join(' ')}</Link>
+                    <p className='hidden'>•</p> <Link to={currentLink}>{crumb.split('+').join(' ')}</Link>
                 </div>
             )
         })
 
     return (
-        <main className='h-full flex w-full justify-center items-center text-white font-semibold uppercase'>
+        <main className='h-full flex flex-col  justify-center items-center text-white font-semibold uppercase'>
             <Link to="/">Home</Link>{crumbs}
         </main>
     )

@@ -6,18 +6,20 @@ import Table from "./Table";
 export default function AuthorDetails() {
     const {author} = useParams();
     const [authorDetails, setAuthorDetails] = useState([])
-    console.log('id ', author)
+
     useEffect(() => {
         axios.get(`https://www.googleapis.com/books/v1/volumes?q=inauthor:"${author}"`)
             .then((response) => {
-                console.log(response.data.items)
                 setAuthorDetails(response.data.items)
             })
     }, []);
 
     return (
-        <main className='min-h-[70vh] pt-32 w-full flex justify-center'>{authorDetails.length > 0 ?
-            <Table data={authorDetails}/> :
+        <main
+            className='min-h-[70vh] pt-32 w-full flex justify-center px-4 sm:px-8 md:px-10 lg:px-20 xl:px-32 2xl:px-44'>{authorDetails.length > 0 ?
+            <div className='flex mt-10 overflow-auto'>
+                <Table data={authorDetails}/>
+            </div> :
             <img src='https://openclipart.org/image/800px/311354'
                  className='w-20 h-20 animate-spin'
                  alt='spinner'/>}

@@ -28,7 +28,7 @@ export default function Books() {
     }
 
     return (
-        <main className='pt-32 min-h-[70vh] w-full flex justify-center'>
+        <main className='pt-32 min-h-[70vh] w-full flex justify-center px-4 sm:px-8 md:px-10 lg:px-20 xl:px-32 2xl:px-44'>
             {books.length > 0 ?
                 <div className='w-full flex flex-col justify-center'>
                     <div className='flex gap-2 items-center justify-center'>
@@ -43,7 +43,7 @@ export default function Books() {
                             className='w-7 h-7 cursor-pointer'
                             alt='search'/>
                     </div>
-                    <div className='flex justify-center mt-10 p-2'>
+                    <div className='flex mt-10 overflow-auto'>
                         <Table data={books}/>
                     </div>
                 </div> :
