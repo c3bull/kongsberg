@@ -11,9 +11,9 @@ export default function Table({data}) {
     ]
 
     return (
-        <table className=' shadow-xl rounded-t-lg rounded-b-lg overflow-hidden mx-2 w-full'>
+        <table className='my-10 shadow-xl rounded-t-lg rounded-b-lg overflow-hidden mx-4 w-full'>
             <tbody>
-            <tr className=''>
+            <tr>
                 {tableHeader.map((header, index) => (
                     <th
                         key={index}

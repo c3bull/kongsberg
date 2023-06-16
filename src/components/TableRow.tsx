@@ -21,21 +21,21 @@ export default function TableRow({id, kind, authors, title, publishedDate, index
                 <p onClick={() => bookDetailsButton(id)}
                    className='cursor-pointer text-start w-fit hover:underline'
                 >
-                    {id ? id : "N/A"}
+                    {id ? id : "-"}
                 </p>
             </td>
             <td className='p-4'>{kind ? kind.map((kind, index) => (
-                <p key={index} className='text-start w-fit max-w-[350px]'>{kind}</p>)) : "N/A"}</td>
+                <p key={index} className='text-start w-fit max-w-[350px]'>{kind}</p>)) : "-"}</td>
             <td className='px-4 py-2'>{authors ? authors.map((author, index) => (
                 <p key={index} onClick={() => authorDetailsButton(author.replaceAll('.', '').split(' ').join('+'))}
-                   className='cursor-pointer text-start w-fit hover:underline min-w-[12rem]'>{author}</p>)) : "N/A"}
+                   className='cursor-pointer text-start w-fit hover:underline min-w-[12rem]'>{author}</p>)) : "-"}
             </td>
             <td className='p-4'>
                 <p onClick={() => bookDetailsButton(id)}
-                   className='cursor-pointer text-start w-fit hover:underline w-52'>{title ? title : "N/A"}</p>
+                   className='cursor-pointer text-start w-fit hover:underline w-52'>{title ? title : "-"}</p>
             </td>
             <td className='p-4'>
-                <p className='text-end w-28'>{publishedDate ? publishedDate : "N/A"}</p>
+                <p className='text-end w-28'>{publishedDate ? publishedDate : "-"}</p>
             </td>
         </tr>
     )

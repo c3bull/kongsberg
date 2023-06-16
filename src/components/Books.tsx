@@ -43,7 +43,7 @@ export default function Books() {
                             className='w-7 h-7 cursor-pointer'
                             alt='search'/>
                     </div>
-                    <div className='flex mt-10 overflow-auto'>
+                    <div className='flex mt-2 overflow-auto'>
                         <Table data={books}/>
                     </div>
                 </div> :

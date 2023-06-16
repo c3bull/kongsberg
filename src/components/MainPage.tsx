@@ -5,7 +5,7 @@ export default function MainPage() {
 
     return (
         <main
-            className='pt-32 w-full min-h-[70vh] flex items-center justify-center gap-10 text-xl uppercase font-semibold duration-200 '>
+            className='pb-10 pt-32 w-full flex items-center justify-center gap-10 text-2xl sm:text-3xl uppercase font-semibold duration-200 '>
             <div className='flex flex-col md:flex-row gap-10 w-3/4'>
                 <div onClick={() => navigate(`/books`)}
                      className='p-10 shadow-xl rounded-lg w-full aspect-square bg-gradient-to-t from-cyan-200 via-cyan-100 to-cyan-200 flex justify-center items-center cursor-pointer hover:scale-105 duration-200'>

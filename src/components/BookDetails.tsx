@@ -25,7 +25,7 @@ export default function BookDetails() {
                 <div className='w-3/4 flex justify-center sm:w-2/3 md:w-4/5 lg:w-2/3 xl:w-3/5'>
                     <div className='w-full flex flex-col items-center gap-y-10'>
                         <article
-                            className='flex flex-col md:flex-row rounded-md bg-gray-100 shadow-lg'>
+                            className='md:w-full mt-10 flex flex-col md:flex-row rounded-md bg-gray-100 shadow-lg'>
                             <aside className='w-full md:w-1/3 p-2'>
                                 <img
                                     src={bookDetails[0].volumeInfo.imageLinks ? bookDetails[0].volumeInfo.imageLinks.thumbnail : "https://static.vecteezy.com/system/resources/previews/005/337/799/original/icon-image-not-found-free-vector.jpg"}
@@ -78,7 +78,7 @@ export default function BookDetails() {
                         <div className='w-full sm:max-w-full '>
                             <p className='text-2xl font-semibold pb-2'>Description</p>
                             {bookDetails[0].volumeInfo.description ?
-                                <p className='max-w-full overflow-auto text-sm'>{bookDetails[0].volumeInfo.description}</p> :
+                                <p className='max-w-full overflow-auto text-sm md:text-[16px] lg:text-lg'>{bookDetails[0].volumeInfo.description}</p> :
                                 <div role="status" className="animate-pulse">
                                     <div className="h-2 bg-gray-200 rounded-full dark:bg-gray-700 w-full mb-2.5"></div>
                                     <div className="h-2 bg-gray-200 rounded-full dark:bg-gray-700 w-4/5 mb-2.5"></div>
@@ -93,7 +93,7 @@ export default function BookDetails() {
                     </div>
 
                 </div> :
-                <img src='https://openclipart.org/image/800px/311354' className='w-20 h-20 animate-spin' alt='spinner'/>
+                <img src='https://openclipart.org/image/800px/311354' className='w-20 h-20 mt-10 animate-spin' alt='spinner'/>
             }
 
 
